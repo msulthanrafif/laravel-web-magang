@@ -1,0 +1,1034 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  margin: 0;
+  background: #fff;
+  color: #A8A8A8;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: #A8A8A8;
+  transition: .3s;
+}
+
+a:hover, a:active, a:focus {
+  color: #1592E6;
+  transition: .5s;
+  outline: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 10px 0 10px 0;
+  padding: 0;
+}
+
+/* Prelaoder */
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #fff url("../img/preloader.svg") no-repeat center center;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 6px 12px 9px 12px;
+  font-size: 16px;
+  border-radius: 2px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+}
+
+.back-to-top:focus {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: #1592E6;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  padding: 30px 0;
+  height: 92px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+#header #logo {
+  float: left;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+  width: 180px;
+}
+
+@media (max-width: 768px) {
+  #header #logo img {
+    max-height: 50px;
+  }
+}
+
+#header.header-fixed {
+  background: rgba(4, 39, 63, 0.9);
+  padding: 15px 0;
+  height: 72px;
+  transition: all 0.5s;
+  font-family: "Poppins", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#home {
+  width: 100%;
+  height: 100vh;
+  background: url(../image/madiun.png) top center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #home {
+    background-attachment: fixed;
+  }
+}
+
+#home:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#home .home-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#home h1 {
+  margin: 50px 0 10px 0;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#home h2 {
+  color: #eee;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #home h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+#home .btn-login {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#home .btn-login:hover {
+  background: #1592E6;
+  color: #ffffff;
+  border: 2px solid #1592E6;
+  text-decoration: none;
+}
+
+p .btn-daftar{
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Nav Menu Essentials */
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+.sf-arrows .sf-with-ul {
+  padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 15px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Nav Meu Container */
+#nav-menu-container {
+  float: right;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #nav-menu-container {
+    display: none;
+  }
+}
+
+/* Nav Meu Styling */
+.nav-menu a {
+  padding: 0 8px 10px 8px;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 15px;
+  outline: none;
+}
+
+.nav-menu > li {
+  margin-left: 10px;
+}
+
+.nav-menu > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #1592E6;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .menu-active > a:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 0;
+  border: 1px solid #e7e7e7;
+}
+
+.nav-menu ul li {
+  background: #fff;
+}
+
+.nav-menu ul li:first-child {
+  border-top: 0;
+}
+
+.nav-menu ul li a {
+  padding: 10px;
+  color: #09273E;
+  transition: 0.3s;
+  display: block;
+  font-size: 13px;
+  text-transform: none;
+}
+
+.nav-menu ul li a:hover {
+  background: #8094a1;
+  color: #fff;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+/* Mobile Nav Toggle */
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 20px 20px 0 0;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+
+#mobile-nav-toggle i {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #mobile-nav-toggle {
+    display: inline;
+  }
+}
+
+/* Mobile Nav Styling */
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: #09273E;
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav ul li {
+  position: relative;
+}
+
+#mobile-nav ul li a {
+  color: #fff;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-nav ul li a:hover {
+  color: #fff;
+}
+
+#mobile-nav ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+  color: #1592E6;
+}
+
+#mobile-nav ul .menu-item-active {
+  color: #1592E6;
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(4, 31, 51, 0.9);
+  display: none;
+}
+
+/* Mobile Nav body classes */
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+  color: #fff;
+}
+
+/* Alur Section
+--------------------------------*/
+#alur {
+  background: #E4E4E4;
+  padding: 80px 0;
+}
+
+#alur .container{
+  width: 100%;
+  height: fit-content;
+  padding: 10px 30px 30px 30px;
+  background-color: #fff;
+  box-shadow: 6px 6px 20px #c9c8c8;
+}
+
+#alur .container img{
+  margin: 40px 0 0 15%;
+}
+
+@media (max-width: 768px) {
+  #alur .alur-container{
+    margin: 0;
+    padding-top: 15px;
+    height: fit-content;
+  }
+}
+
+#alur .container h2{
+  text-align: center;
+  text-transform: uppercase;
+  color: #9c9c9c;
+}
+
+/* Contact Section
+--------------------------------*/
+#contact {
+  background: #09273E;
+  padding: 80px 0 30px 0;
+}
+
+#contact .section-header h3{
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+}
+
+#contact .section-header p {
+  width: 80px;
+  height: 3px;
+  margin-left: 2px;
+  padding: 0;
+  background-color: #A8A8A8;
+}
+
+#contact .info {
+  color: #BCB8B8;
+}
+
+#contact .info i{
+  background-size: 20px;
+  color: #c9c9c9;
+  float: left;
+}
+
+#contact .info p {
+  padding: 0 0 10px 50px;
+  margin-bottom: 20px;
+  line-height: 22px;
+  font-size: 14px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#contact .logo2 img{
+  padding-bottom: 20px;
+  width: 65%;
+}
+
+#contact .form #sendmessage {
+  color: #1592E6;
+  border: 1px solid #1592E6;
+  display: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact .form #errormessage {
+  color: red;
+  display: none;
+  border: 1px solid red;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact .form #sendmessage.show, #contact .form #errormessage.show, #contact .form .show {
+  display: block;
+}
+
+#contact .form .validation {
+  color: red;
+  display: none;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+#contact .form input, #contact .form textarea {
+  border: 2px solid #fff;
+  border-radius: 28px 28px 28px 0;
+  box-shadow: none;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+#contact .form button[type="submit"] {
+  background: #F27D20;
+  border-radius: 28px 28px 28px 0;
+  border: 0;
+  padding: 10px 24px;
+  border: 2px solid #F27D20;
+  color: #fff;
+  transition: 0.4s;
+}
+
+#contact .form button[type="submit"]:hover {
+  color: #fff;
+  border: 2px solid #F27D20;
+  background-color: inherit;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #09273E;
+  padding: 20px 0;
+  color: rgb(202, 202, 202);
+  font-size: 14px;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: rgb(202, 202, 202);
+}
+
+/*--------------------------------------------------------------
+# Login Page
+--------------------------------------------------------------*/
+
+.login-page{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(../image/madiun.png);
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  .login-page {
+    background-attachment: fixed;
+  }
+}
+
+.login-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 40px 40px 0 40px;
+  background: rgba(0, 0, 0, .6);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+
+.login-box h1{
+  margin: 0 0 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 450;
+  color: #fff;
+}
+
+.login-box .inputBox{
+  position: relative;
+}
+
+.login-box .inputBox input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .inputBox label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .inputBox input:focus ~ label,
+.login-box .inputBox input:valid ~ label{
+  top: -18px;
+  left: 0;
+  color: #1592E6;
+  font-size: 12px;
+}
+
+.login-box input[type="submit"]{
+  background: transparent;
+  transform: translate(125%, 0);
+  border: none;
+  color: #5B6264;
+  border: 1px solid #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+  background: #ffff;
+  border-radius: 20px;
+  padding: 5px 25px;
+  cursor: pointer;
+  border-spacing: 5px;
+  transition: .3s;
+}
+
+.login-box input[type="submit"]:hover{
+  color: #fff;
+  background-color: #1592E6;
+  border: 1px solid #1592E6;
+  transition: .3s;
+}
+
+.login-box p{
+  padding: 10px 0;
+  text-align: center;
+  font-size: 12px;
+  font-family: Cambria, serif;
+}
+
+/*--------------------------------------------------------------
+# Regis Page
+--------------------------------------------------------------*/
+.registration-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(../image/madiun.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (min-width: 1024px) {
+  .registration-page {
+    background-attachment: fixed;
+  }
+}
+
+.registration-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 150px 0 150px 0;
+  width: 600px;
+  padding: 40px;
+  background: rgba(0, 0, 0, .6);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+
+.registration-box h1{
+  margin: 0 0 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 450;
+  color: #fff;
+}
+
+.registration-box .inputBox{
+  position: relative;
+}
+
+.registration-box .inputBox input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.registration-box .inputBox label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.registration-box .inputBox input:focus ~ label,
+.registration-box .inputBox input:valid ~ label{
+  top: -18px;
+  left: 0;
+  color: #1592E6;
+  font-size: 12px;
+}
+
+.registration-box input[type="submit"]{
+  background: transparent;
+  transform: translate(125%, 0);
+  border: none;
+  color: #5B6264;
+  border: 1px solid #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 550;
+  background: #ffff;
+  border-radius: 20px;
+  padding: 5px 25px;
+  cursor: pointer;
+  border-spacing: 5px;
+  transition: .3s;
+}
+
+.registration-box input[type="submit"]:hover{
+  color: #fff;
+  background-color: #1592E6;
+  border: 1px solid #1592E6;
+  transition: .3s;
+}
+
+
+/* pengumuman */
+.container-dua {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.split-box {
+  width: 50%;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: space-between;
+  background-color: #F1F5F8;
+}
+/* navbar kedua */
+#nav-dua {
+  padding: 20px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #09273E;
+}
+
+#nav-dua img {
+  width: auto;
+  height: 40px;
+  padding: 0 0 0 30px;
+}
+
+#nav-dua ul {
+  display: flex;
+  padding: 0 20px 0 0;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+#nav-dua li a{
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.content-pengumuman {
+  padding: 50px;
+  font-size: 17px;
+}
+
+.content-pengumuman h3{
+  color: black;
+  font-weight: 600;
+  font-family: "Montserrat";
+}
+
+.content-pengumuman p{
+  padding: 10px 0;
+  color: rgb(7, 199, 7);
+  /* color: rgb(226, 2, 2); */
+  font-weight: 500;
+  font-family: "Poppins";
+}
+
+.btn-unduh {
+  padding: 10px 30px 10px 30px;
+  border: 1px solid #7e7d7d;
+  background-color: inherit;
+  border-radius: 30px;
+  color: #7e7d7d;
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.btn-unduh:hover {
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 30px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.image-box img{
+  width: 100%;
+  height: 100vh;
+}
+
+/* Daftar OPD */
+.daftar-opd {
+  padding: 50px;
+}
+
+.daftar-opd h3{
+  color: #000;
+  font-weight: 600;
+  font-family: "Montserrat";
+}
+
+.dropbtn {
+  background-color: inherit;
+  color: #5B6264;
+  padding: 16px 16px 5px 0;
+  font-size: 16px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid rgb(88, 88, 88);
+  width: 180%;
+  transition: .3s;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 180%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  transition: .3s;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: inherit;
+  color: #7e7d7d;
+  transition: .5s;
+}
+
+.daftar-opd .choose-file {
+  display: flex;
+  padding: 20px 0 30px 0;
+  height: 30px;
+  justify-content: left;
+}
+
+.daftar-opd .choose-file button {
+  padding: 0 10px 0 10px;
+  font-family: "Poppins";
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  color: #505455;
+  background-color: inherit;
+  border: 1px solid #505455;
+  transition: .3s;
+}
+
+.daftar-opd .choose-file button:hover {
+  color: #1592E6;
+  border: 1px solid #1592E6;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.daftar-opd .choose-file p {
+  padding: 10px;
+  align-content: center;
+  font-family: "Poppins";
+  color: #505455;
+}
+
+.daftar-opd .choose-file h5 {
+  padding: 3px;
+  justify-content: center;
+  font-family: "Poppins";
+  color: #92999b;
+}
+
+.btn-daftar-opd {
+  padding: 10px 30px 10px 30px;
+  border: 1px solid #7e7d7d;
+  background-color: inherit;
+  border-radius: 30px;
+  color: #7e7d7d;
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.btn-daftar-opd:hover {
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 30px;
+  transition: .5s;
+  cursor: pointer;
+}
