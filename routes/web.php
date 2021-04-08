@@ -32,3 +32,23 @@ Route::get('/pendaftaran', function () {
 Route::get('/pengumuman', function () {
     return view('user.pengumuman');
 });
+
+Route::get('/super-admin', function () {
+    return view('admin.super-admin');
+});
+
+Route::get('/tambah-data-admin', function () {
+    return view('admin.tambah-data-admin');
+});
+
+Route::get('/update-data-admin', function () {
+    return view('admin.update-data-admin');
+});
+
+Route::get('/admin-bkd', function () {
+    return view('admin.admin-bkd');
+});
+
+Route::get('/admin-opd', function () {
+    return view('admin.admin-opd');
+});
